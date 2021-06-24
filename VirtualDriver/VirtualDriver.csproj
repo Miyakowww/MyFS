@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>MyFS.VirtualDriver</AssemblyName>
+    <RootNamespace>MyFS.VirtualDriver</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HIAL\HIAL.csproj" />
+  </ItemGroup>
+
+</Project>
