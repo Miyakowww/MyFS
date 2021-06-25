@@ -6,7 +6,7 @@ using MyFS.HIAL;
 
 namespace MyFS.VirtualDriver
 {
-    public class Page : PageData, IPage, IPageData, IReadonlyPageData, IEnumerable<byte>, IEnumerable
+    public class Page : PageData, IPage
     {
         private readonly IDisk disk;
 
@@ -26,7 +26,7 @@ namespace MyFS.VirtualDriver
         }
     }
 
-    public class PageData : IPageData, IReadonlyPageData, IEnumerable<byte>, IEnumerable
+    public class PageData : IPageData
     {
         private readonly byte[] data;
 
