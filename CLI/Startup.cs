@@ -28,7 +28,7 @@ namespace MyFS.CLI
                     case "help":
                         Console.WriteLine("MyFS CLI, version 1.0.0");
                         Console.WriteLine();
-                        Console.WriteLine("dir/ls [args]");
+                        Console.WriteLine("dir/ls <args>");
                         Console.WriteLine("    -a  Show all files");
                         Console.WriteLine("    -i  Show info");
                         Console.WriteLine("create [name]");
@@ -113,6 +113,7 @@ namespace MyFS.CLI
             }
             foreach (var item in subFolders)
             {
+                var orig = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Blue;
                 if (info)
                 {
@@ -122,7 +123,7 @@ namespace MyFS.CLI
                 {
                     Console.WriteLine(item.Name);
                 }
-                Console.ForegroundColor = ConsoleColor.White;
+                Console.ForegroundColor = orig;
             }
 
             var subFiles = folder.GetAllFiles()!.Where(f => all || !f.Name.StartsWith('.'));
